@@ -1,0 +1,38 @@
+
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Employee Details</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue" >
+                <div class="mb-1" >
+                    <label for="exampleInputId" class="form-label">EMP NO</label>
+                    <input type="number" class="form-control" id="exampleInputNumber"  formControlName="empno">
+                  </div>
+                <div class="mb-2">
+                    <label for="exampleInputName" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="exampleInputName" formControlName="name" >
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" formControlName="email" >
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputSalary" class="form-label">Salary</label>
+                  <input type="number" class="form-control" id="exampleInputSalary" formControlName="salary">
+                </div>
+              
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addEmp()">Add Employee</button>
+        </div>
+      </div>
+    </div>
+  </div>

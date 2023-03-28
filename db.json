@@ -1,0 +1,21 @@
+{
+  "EmpDetails": [
+    {
+      "empno": 2,
+      "name": "suraj bhoji",
+      "email": "surajbhoji1208@gmail.com",
+      "salary": 14000,
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

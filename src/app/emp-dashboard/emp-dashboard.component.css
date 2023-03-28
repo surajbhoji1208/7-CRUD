@@ -1,0 +1,62 @@
+/* nav */
+.nav
+{
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h1
+{
+    margin-left: 200px;
+    color: aliceblue;
+}
+.btn
+{
+    margin-right: 100px;
+    
+}
+.btn button
+{
+    border-radius: 10px;
+    padding: 10px;
+}
+/* nav end */
+
+table {
+    width: 100%;
+  }
+
+  /* Table */
+  .table
+  {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    height: auto;
+    width: 100%;
+    margin: 0 auto;
+   
+    
+  }
+  .table tr td{
+    border: 1px white;
+  }
+
+  
+  /* btns */
+.btn
+{
+    display: flex;
+    justify-content: end;
+    justify-content: space-evenly;
+}
+.btn button
+{
+    padding: 0px 20px 0px 20px;
+
+}
+#th
+{
+    text-align: center;
+}
+

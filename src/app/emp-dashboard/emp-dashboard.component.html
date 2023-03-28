@@ -1,0 +1,37 @@
+<!-- nav start -->
+<div class="nav">
+    <h1>CRUD</h1>
+    <div class="btn">
+        <button routerLink="btn"  type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Add Employe</button>
+    </div>
+</div>
+<!-- nav end -->
+
+<!-- table start -->
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">EMP NO</th>
+        <th scope="col">NAME</th>
+        <th scope="col">EMAIL</th>
+        <th scope="col">SALARY</th>
+        <th scope="col" id="th" >OPERATIONs</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of empData">
+        <th scope="row">{{i.id}}</th>
+        <td>{{i.name}}</td>
+        <td>{{i.email}}</td>
+        <td>{{i.salary}}</td>
+        <td class="btn">
+            <button (click)="updateEmp(i)">Update</button>
+            <button (click)="deleteEmp(i.id)">Delete</button>
+            <button (click)="viewEmp(i)">View</button>
+        </td>
+      </tr>
+     
+      
+    </tbody>
+  </table>
+<!-- table end -->
