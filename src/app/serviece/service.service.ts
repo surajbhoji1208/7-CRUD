@@ -16,6 +16,7 @@ export class ServiceService {
   getEmpService()     //to get data from the debugger.json
   {
     return this.http.get('http://localhost:3000/EmpDetails')
+    
   }
 
   deleteEmpService(id:any) //to delete data from table
@@ -26,7 +27,7 @@ export class ServiceService {
   updateEmpService(id:any,data:any)//to update value in db.json
   {
     return this.http.put('http://localhost:3000/EmpDetails/'+id,data)
-    console.log(data,id);
+    
     
   }
 

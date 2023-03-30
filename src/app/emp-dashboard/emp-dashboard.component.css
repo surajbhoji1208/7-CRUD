@@ -16,10 +16,11 @@ h1
     margin-right: 100px;
     
 }
-.btn button
+#btnNav
 {
     border-radius: 10px;
     padding: 10px;
+    background-color: azure;
 }
 /* nav end */
 
@@ -38,25 +39,23 @@ table {
    
     
   }
-  .table tr td{
-    border: 1px white;
+
+  h1{
+    text-align: center;
   }
 
   
   /* btns */
-.btn
+button
+{
+    background-color: aquamarine;
+}
+.tbtn
 {
     display: flex;
-    justify-content: end;
-    justify-content: space-evenly;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: flex-start;
 }
-.btn button
-{
-    padding: 0px 20px 0px 20px;
 
-}
-#th
-{
-    text-align: center;
-}
 

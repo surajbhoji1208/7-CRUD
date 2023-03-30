@@ -1,8 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { AddEmpComponent } from '../add-emp/add-emp.component';
 import { ServiceService } from '../serviece/service.service';
 import { UpdateComponent } from '../update/update.component';
 import { ViewEmpComponent } from '../view-emp/view-emp.component';
+
+export interface PeriodicElement {
+  name: string;
+  position: number;
+  weight: number;
+  symbol: string;
+}
+
 
 
 @Component({
@@ -11,20 +20,38 @@ import { ViewEmpComponent } from '../view-emp/view-emp.component';
   styleUrls: ['./emp-dashboard.component.css']
 })
 export class EmpDashboardComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
+ 
 
 
   constructor(private http: ServiceService, public dialog: MatDialog) { }
 
-  empData: any  //this variable store the data which is comming from the db.json 
-
-  ngOnInit(): void {
-    this.http.getEmpService().subscribe(res => {     //to get data from the db.json to table
-      this.empData = res;
-    })
+  openDialog()
+  {
+    this.dialog.open(AddEmpComponent, {
+      
+    });
   }
 
-  // to delete data
+                           //show data in table
+
+  empData: any  //this variable store the data which is comming from the db.json 
+  displayedColumns: string[] = ['empno', 'name', 'email', 'salary'];
+  public dataSource:any=[]
+  ngOnInit(): void {
+    this.http.getEmpService().subscribe(res => {     //to get data from the db.json to table
+      // this.empData = res;
+      this.dataSource=res
+        })
+   }
+
+
+
+
+
+
+   
+
+                              // to delete data
   deleteEmp(id: any) {
     this.http.deleteEmpService(id).subscribe(res => {
 
@@ -33,18 +60,21 @@ export class EmpDashboardComponent implements OnInit {
 
   }
 
-  //to view emp details
+                             //to view emp details
   viewEmp(data1: any) {
     this.dialog.open(ViewEmpComponent, {
       data: {
-        id: data1.id,
+        id: data1.empno,
         name: data1.name,
         email: data1.email,
         salary: data1.salary
       },
     });
+    console.table(data1);
+    
+    
   }
-//to update data
+                             //to update data
 updateEmp(data2:any)
 {
   

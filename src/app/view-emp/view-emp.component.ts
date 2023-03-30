@@ -14,7 +14,10 @@ export interface DialogData {
 })
 export class ViewEmpComponent implements OnInit {
   
-  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {}
+  constructor(@Inject(MAT_DIALOG_DATA) public data: DialogData) {
+    console.log(data);
+    
+  }
 
   ngOnInit(): void {
   }

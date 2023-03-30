@@ -35,6 +35,7 @@ export class UpdateComponent implements OnInit {
 updateValue(data1:any)
 {
   this.http.updateEmpService(data1,this.updateForm.value).subscribe(res=>{})
+  location.reload()
 }
   
 }
